@@ -1,24 +1,13 @@
-# README
+DANS LE TERMINAL:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Un ptit coup de : 'bundle install' ;
 
-Things you may want to cover:
+Ensuite tu peux peupler en local la BDD en faisant : 'rails db:create db:migrate db:seed' ;
 
-* Ruby version
+Enfin, balance un : 'rails s' ... 
 
-* System dependencies
+... et on se retrouve dans ton browser sur : "http://localhost:3000/"
 
-* Configuration
+__________________________________________________________________________________________________
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1) Il faut que tu te créées un compte pour intéragir sur le site ! (Sign up) et bien évidemment que tu te Log in.

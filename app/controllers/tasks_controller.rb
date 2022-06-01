@@ -32,6 +32,14 @@ before_action :authenticate_user!
 
   def update
     @task = Task.find(params[:id])
+    
+    # For the checkbox to work, we need to make it possible to change the status from true to false and vice versa:
+    if @task.status # <= same as "if @task.status == true"
+      @task.status = false
+    elsif @task.status = false
+      @task.status = true
+    end
+
     @task.update(task_params)
     redirect_to tasks_path
     flash[:notice] = "Task edited"

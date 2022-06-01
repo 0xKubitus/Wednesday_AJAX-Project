@@ -8,6 +8,10 @@
     <ul id="task-list-<%= category.title %>"> <!-- adding id="task-list" so that it can be identified in 'create.js.erb' -->
       <% category.tasks.each do |task|  %>
       <li id="task-id<%= task.id %>">
+        <div>
+          <!-- <input type="checkbox" data-remote="true" data-url="/update" data-method="put"> -->
+          <%= check_box_tag :name, 1, false , data: { remote: true, url: task_path(task.id), params: { id: task.id, status: task.status}.to_param, method: "put" }%>
+        </div>
         <%= task.title  %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>

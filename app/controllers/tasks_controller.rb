@@ -9,6 +9,7 @@ before_action :authenticate_user!
     @category = Category.find(category_params)
     @task.category = @category
     if @task.save
+      # adding 'respond_to |format| ... ' for AJAX to work and read our js.erb file instead of .html one if possible (some browser may not support it)
       respond_to do |format|
         format.html { redirect_to root_path }
         format.js { }
